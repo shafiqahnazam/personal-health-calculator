@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (https://github.com/eclipse-ee4j/metro-jax-ws). RI's version is Eclipse Metro/3.0.3 (RELEASE-3.0.3-7a63cef; 2021-10-13T11:40:48+0000) JAXWS-RI/3.0.2 JAXWS-API/3.0.1 JAXB-RI/3.0.2 JAXB-API/3.0.1 git-revision#7a63cef. --><xs:schema xmlns:tns="http://service.health.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service.health.com/">
+
+<xs:element name="calculateBMI" type="tns:calculateBMI"/>
+
+<xs:element name="calculateBMIResponse" type="tns:calculateBMIResponse"/>
+
+<xs:element name="calculateBMR" type="tns:calculateBMR"/>
+
+<xs:element name="calculateBMRResponse" type="tns:calculateBMRResponse"/>
+
+<xs:element name="calculateBodyFat" type="tns:calculateBodyFat"/>
+
+<xs:element name="calculateBodyFatResponse" type="tns:calculateBodyFatResponse"/>
+
+<xs:element name="calculateCalories" type="tns:calculateCalories"/>
+
+<xs:element name="calculateCaloriesResponse" type="tns:calculateCaloriesResponse"/>
+
+<xs:element name="calculateLBM" type="tns:calculateLBM"/>
+
+<xs:element name="calculateLBMResponse" type="tns:calculateLBMResponse"/>
+
+<xs:complexType name="calculateCalories">
+<xs:sequence>
+<xs:element name="weight" type="xs:double"/>
+<xs:element name="height" type="xs:double"/>
+<xs:element name="age" type="xs:int"/>
+<xs:element name="gender" type="xs:string" minOccurs="0"/>
+<xs:element name="weeklyMinutes" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateCaloriesResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateLBM">
+<xs:sequence>
+<xs:element name="weight" type="xs:double"/>
+<xs:element name="bodyFatPercentage" type="xs:double"/>
+<xs:element name="gender" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateLBMResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateBMR">
+<xs:sequence>
+<xs:element name="weight" type="xs:double"/>
+<xs:element name="height" type="xs:double"/>
+<xs:element name="gender" type="xs:string" minOccurs="0"/>
+<xs:element name="age" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateBMRResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateBodyFat">
+<xs:sequence>
+<xs:element name="waist" type="xs:double"/>
+<xs:element name="neck" type="xs:double"/>
+<xs:element name="height" type="xs:double"/>
+<xs:element name="hip" type="xs:double"/>
+<xs:element name="gender" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateBodyFatResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateBMI">
+<xs:sequence>
+<xs:element name="weight" type="xs:double"/>
+<xs:element name="height" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculateBMIResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
